@@ -118,8 +118,44 @@ dotnet test
 ---
 
 ## Next Steps (Improvements)
-- Implement JWT authentication with refresh tokens / API Key
-- Persist DB with DB Server.
-- Frontend testing (React Testing Library / Jest)
-- Add sorting and search features in the frontend table.
-- CI/CD setup with GitHub Actions + Docker.
+- Security & Authentication
+
+   - Implement JWT authentication with refresh tokens to secure API access and enable session renewal without re-login.
+
+   - Add API key support for service-to-service communication.
+
+- Data & Persistence
+
+   - Replace the in-memory DB with a persistent relational database (SQL Server / PostgreSQL) for real-world storage.
+
+   - Introduce EF Core migrations for schema versioning and smooth deployments.
+
+   - Seed sample data via migrations instead of code for reproducibility.
+
+- Frontend Enhancements
+
+   - Add sorting and search to the applications table for better UX.
+
+   - Improve form validation UX with inline messages and status indicators.
+
+   - Implement frontend testing (React Testing Library / Jest) to ensure UI reliability.
+
+- Testing & Quality
+
+   = Add integration tests for API endpoints (with WebApplicationFactory) to complement existing unit tests.
+
+   - Add end-to-end tests (Playwright / Cypress) covering the full stack.
+
+- DevOps & Deployment
+
+   - Set up CI/CD with GitHub Actions for automated build, test, and deployment.
+
+   - Add Docker & Docker Compose for consistent local and cloud deployment.
+
+   - Prepare Kubernetes manifests / Helm charts for scalability in production.
+
+- Monitoring & Observability
+
+   - Integrate logging and metrics (Serilog, Application Insights, Grafana) for production health monitoring.
+
+   - Add alerts and dashboards for error rates, API response times, and DB performance
